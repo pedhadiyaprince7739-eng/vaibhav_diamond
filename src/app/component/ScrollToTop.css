@@ -1,0 +1,114 @@
+/* ==========================================================================
+   FLOATING SCROLL TO TOP BUTTON (ALL PAGES)
+   ========================================================================== */
+
+.vd-scroll-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0c1d37 0%, #07111e 100%);
+    border: 1.5px solid rgba(56, 189, 248, 0.45);
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    outline: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(56, 189, 248, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.85);
+    transition:
+        opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    padding: 0;
+    user-select: none;
+}
+
+.vd-scroll-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.vd-scroll-glow {
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.vd-scroll-icon {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+}
+
+.vd-scroll-to-top:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0c1d37 100%);
+    border-color: #38bdf8;
+    color: #ffffff;
+    transform: translateY(-4px) scale(1.06);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 24px rgba(56, 189, 248, 0.55);
+}
+
+.vd-scroll-to-top:hover .vd-scroll-glow {
+    opacity: 1;
+}
+
+.vd-scroll-to-top:hover .vd-scroll-icon {
+    transform: translateY(-2px);
+}
+
+.vd-scroll-to-top:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* Optional hover tooltip */
+.vd-scroll-tooltip {
+    position: absolute;
+    right: 58px;
+    white-space: nowrap;
+    background: rgba(7, 17, 30, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #e0f2fe;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 5px 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.vd-scroll-to-top:hover .vd-scroll-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .vd-scroll-to-top {
+        bottom: 22px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .vd-scroll-tooltip {
+        display: none;
+    }
+}
