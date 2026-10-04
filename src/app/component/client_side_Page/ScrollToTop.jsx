@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "./ScrollToTop.css";
+import "../client_side_Page/ScrollToTop.css";
 
 export default function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false);

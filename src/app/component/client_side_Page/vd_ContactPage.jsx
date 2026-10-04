@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "../component/vd_ContactPage.css";
+import "../client_side_Page/vd_ContactPage.css";
 
 // Vaibhav Diamond Official 3D Logo Component
 function VaibhavLogo({ className = "vd-logo-img" }) {

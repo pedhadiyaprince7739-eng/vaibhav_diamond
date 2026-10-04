@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import "../component/vd_AboutPage.css";
+import "../client_side_Page/vd_AboutPage.css";
 
 function AnimatedCounter({ end, duration = 2200, suffix = "" }) {
     const [count, setCount] = useState(0);
@@ -319,13 +319,13 @@ export default function AboutPage() {
                         <div className="vd-footer-col">
                             <h4>Direct Contact</h4>
                             <a href="tel:+919904730345" title="Call Bharatbhai Pipaliya">
-                                 Bharatbhai: +91 99047 30345
+                                Bharatbhai: +91 99047 30345
                             </a>
                             <a href="tel:+919624557303" title="Call Ramjibhai Rokad">
-                                 Ramjibhai: +91 96245 57303
+                                Ramjibhai: +91 96245 57303
                             </a>
                             <a href="mailto:info@vaibhavdiamond.com" title="Email Vaibhav Diamond">
-                                 info@vaibhavdiamond.com
+                                info@vaibhavdiamond.com
                             </a>
                             <a href="/Contact_Us" style={{ color: "var(--brand-cyan)", marginTop: "6px" }}>
                                 Inquire for Bulk Parcels &rarr;
